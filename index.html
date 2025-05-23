@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeCanvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar">
+            <h2>Node Palette</h2>
+            <div id="node-palette">
+                <!-- Nodes will be dynamically added here -->
+            </div>
+        </aside>
+
+        <main id="main-editor-area"> <!-- Renamed for clarity -->
+            <div id="canvas-container"> <!-- Editor canvas container -->
+                <canvas id="editor-canvas" width="1200" height="800"></canvas> <!-- Editor canvas, increased default size -->
+            </div>
+            <div id="controls">
+                <button id="run-btn">Run</button>
+                <button id="view-code-btn">View Code</button>
+                <button id="save-workspace-btn">Save Workspace</button>
+                <button id="load-workspace-btn">Load Workspace</button>
+            </div>
+            <pre id="code-view" hidden></pre>
+        </main>
+
+        <aside id="output-sidebar"> <!-- NEW: Container for the output -->
+            <h2>Output</h2>
+            <div id="output-canvas-container">
+                <canvas id="output-drawing-canvas" width="400" height="300"></canvas> <!-- Dimensions can be adjusted via CSS too -->
+            </div>
+        </aside>
+    </div>
+    <script type="module" src="js/CompilerApp.js" defer></script>
+</body>
+</html>
